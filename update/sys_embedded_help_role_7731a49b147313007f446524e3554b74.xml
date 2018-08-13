@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_snc_loaner_reque.loaner_request_user" name="x_snc_loaner_reque.loaner_request_user">3b31a49b147313007f446524e3554b71</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-13 13:05:58</sys_created_on>
+        <sys_id>7731a49b147313007f446524e3554b74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3b31a49b147313007f446524e3554b71</sys_name>
+        <sys_package display_value="Loaner Request" source="x_snc_loaner_reque">5a0dd05b147313007f446524e3554bb4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">5a0dd05b147313007f446524e3554bb4</sys_scope>
+        <sys_update_name>sys_embedded_help_role_7731a49b147313007f446524e3554b74</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-13 13:05:58</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
