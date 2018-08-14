@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_style">
+    <sys_ui_style action="INSERT_OR_UPDATE">
+        <alt/>
+        <element>item_type</element>
+        <name>x_snc_loaner_reque_loaner_request</name>
+        <style>background-color:PapayaWhip;&#13;
+color:brown;</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-13 14:45:36</sys_created_on>
+        <sys_id>02d7b41314b313007f446524e3554bd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_loaner_reque_loaner_request</sys_name>
+        <sys_package display_value="Loaner Request" source="x_snc_loaner_reque">5a0dd05b147313007f446524e3554bb4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">5a0dd05b147313007f446524e3554bb4</sys_scope>
+        <sys_update_name>sys_ui_style_02d7b41314b313007f446524e3554bd5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-13 14:45:36</sys_updated_on>
+        <value>cmdb_ci_projector</value>
+    </sys_ui_style>
+    <sys_translated_text action="delete_multiple" query="documentkey=02d7b41314b313007f446524e3554bd5"/>
+</record_update>
