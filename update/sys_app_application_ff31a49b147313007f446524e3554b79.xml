@@ -8,14 +8,14 @@
         <hint/>
         <name>Loaner Request</name>
         <order>100</order>
-        <roles>x_snc_loaner_reque.loaner_request_user</roles>
+        <roles>x_snc_loaner_reque.loaner_request_user,x_snc_loaner_reque.admin</roles>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-08-13 13:05:58</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ff31a49b147313007f446524e3554b79</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Loaner Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Loaner Request" source="x_snc_loaner_reque">5a0dd05b147313007f446524e3554bb4</sys_package>
@@ -23,7 +23,7 @@
         <sys_scope display_value="Loaner Request">5a0dd05b147313007f446524e3554bb4</sys_scope>
         <sys_update_name>sys_app_application_ff31a49b147313007f446524e3554b79</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-13 13:05:58</sys_updated_on>
+        <sys_updated_on>2018-08-14 13:14:22</sys_updated_on>
         <title>Loaner Request</title>
         <view_name/>
     </sys_app_application>
