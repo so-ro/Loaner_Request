@@ -3,9 +3,9 @@
     <sys_script action="INSERT_OR_UPDATE">
         <abort_action>false</abort_action>
         <access>package_private</access>
-        <action_delete>false</action_delete>
+        <action_delete>true</action_delete>
         <action_insert>true</action_insert>
-        <action_query>false</action_query>
+        <action_query>true</action_query>
         <action_update>true</action_update>
         <active>true</active>
         <add_message>false</add_message>
@@ -19,7 +19,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Set Start and End dates</name>
+        <name>Retrieved Credentials</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,29 +29,51 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
-	if (current.end_date < current.start_date) {
-		gs.addErrorMessage('End date must be later than start date!');
-		current.setAbortAction(true);
+	gs.info('Retrieved Credentials: ' , SR);
+	
+	if(current.item_type == "cmdb_ci_computer"){
+		
+		var request = new sn_ws.RESTMessageV2();
+		request.setEndpoint('https://ad-k-13082018-test-001.lab.service-now.com/api/now/table/u_password_vault?sysparm_query=u_asset%3D' + current.cmdb_ci.asset_tag +'&sysparm_fields=u_password&sysparm_limit=1');
+		request.setHttpMethod('GET');
+		
+		//Eg. UserName="admin", Password="admin" for this code sample.
+		var user = 'admin';
+		var password = 'materna';
+		
+		request.setBasicAuth(user,password);
+		request.setRequestHeader("Accept","application/json");
+		
+		var response = request.execute();
+		gs.info(response.getBody(), SR);
+		
+		var obj = JSON.parse(response.getBody());
+		var myPass = obj.result[0].u_password;
+		gs.info('u_password: ' + myPass, SR);
+		
 	}
-})(current, previous);]]></script>
+	
+	
+})(current, previous);
+
+]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-08-14 12:32:29</sys_created_on>
+        <sys_created_on>2018-08-15 13:49:58</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>87d2a9ab147713007f446524e3554b0c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Set Start and End dates</sys_name>
+        <sys_id>907bf6f314bb13007f446524e3554b92</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Retrieved Credentials</sys_name>
         <sys_overrides/>
         <sys_package display_value="Loaner Request" source="x_snc_loaner_reque">5a0dd05b147313007f446524e3554bb4</sys_package>
         <sys_policy/>
         <sys_scope display_value="Loaner Request">5a0dd05b147313007f446524e3554bb4</sys_scope>
-        <sys_update_name>sys_script_87d2a9ab147713007f446524e3554b0c</sys_update_name>
+        <sys_update_name>sys_script_907bf6f314bb13007f446524e3554b92</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-15 14:23:44</sys_updated_on>
+        <sys_updated_on>2018-08-15 14:05:22</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>async</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=87d2a9ab147713007f446524e3554b0c"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=907bf6f314bb13007f446524e3554b92"/>
 </record_update>
